@@ -7,6 +7,13 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
     port: 3000,
-    allowedHosts: ["weather-app-x5qe.onrender.com"],
+    middlewareMode: false,
+  },
+  build: {
+    outDir: "dist",
+    sourcemap: false,
+  },
+  define: {
+    "process.env.NODE_ENV": '"production"',
   },
 });
